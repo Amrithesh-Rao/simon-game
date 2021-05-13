@@ -54,6 +54,8 @@ function checkAnswer(currentLevel){
 
 function playSound(name){
   var audio = new Audio("sounds/" + name + ".mp3");
+  audio.preload="auto"
+  audio.currentTime=0
   audio.play();
 }
 
