@@ -9,7 +9,7 @@ $(document).keydown(function (){
   }
 })
 
-$(document).on("tap",function(){
+$(document).on("touchstart",function(){
   if(level===0){
     nextSequence()
   }
