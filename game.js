@@ -9,6 +9,12 @@ $(document).keydown(function (){
   }
 })
 
+$(document).click(function(){
+  if(level===0){
+    nextSequence()
+  }
+})
+
 
 $(".btn").click(function (){
   var userChosenColour=this.id
