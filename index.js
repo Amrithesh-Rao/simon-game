@@ -1,11 +1,13 @@
+require("dotenv").config();
 const express=require("express");
 const ejs =require("ejs");
 const bodyParser=require("body-parser");
 const mongoose =require("mongoose");
 
 
+
 const app = express();
-mongoose.connect('mongodb://localhost:27017/SimonGame', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb+srv://admin:'+process.env.PASSWORD+'@simongame.2lbn0.mongodb.net/SimonGame?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true});
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public"));
@@ -74,6 +76,6 @@ app.post('/',(req,res)=>{
 })
 
 
-app.listen(3000,function(){
+app.listen(9000,function(){
     console.log("Server is up and running");
 })
