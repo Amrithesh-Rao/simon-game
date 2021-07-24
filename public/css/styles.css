@@ -1,0 +1,133 @@
+body {
+  text-align: center;
+  background-color: #1e1e26;
+  overflow-x: hidden;
+}
+
+.start {
+  width: 15rem;
+}
+
+#level-title {
+  font-family: "Press Start 2P", cursive;
+  font-weight: 400;
+  font-size: 3rem;
+  margin: 1%;
+  color: #fef2bf;
+}
+
+.container {
+  display: block;
+  width: 50%;
+  margin: auto;
+}
+
+.btn {
+  margin: 15px;
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  border: 10px solid black;
+  border-radius: 20%;
+}
+
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.pressed {
+  box-shadow: 0 0 20px white;
+  background-color: grey;
+}
+@media (max-width: 1150px) {
+  .container .row {
+    display: inline;
+  }
+  .container {
+    width: unset;
+  }
+  .btn {
+    height: 18rem;
+    width: 18rem;
+  }
+}
+
+h4 {
+  color: white;
+}
+.table {
+  color: lavenderblush;
+  border: 1px white;
+}
+div.wrapper {
+  overflow: hidden;
+  overflow-y: scroll;
+  height: 500px;
+  box-shadow: 0px 0px 6px 0px black;
+}
+thead {
+  font-family: "Press Start 2P", cursive;
+  /* font-size: 0.8rem; */
+}
+.l-title {
+  font-family: "Press Start 2P", cursive;
+  margin: 1rem;
+  font-size: 1.5rem;
+}
+tbody {
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.8rem;
+}
+/* .wrapper::-webkit-scrollbar {
+  display: none;
+} */
+.wrapper::-webkit-scrollbar {
+  width: 8px;
+  height: 3px;
+}
+.wrapper::-webkit-scrollbar-button {
+  background-color: #666;
+}
+.wrapper::-webkit-scrollbar-track {
+  background-color: #646464;
+}
+.wrapper::-webkit-scrollbar-track-piece {
+  background-color: #000;
+}
+.wrapper::-webkit-scrollbar-thumb {
+  height: 50px;
+  background-color: #666;
+  border-radius: 3px;
+}
+.wrapper::-webkit-scrollbar-corner {
+  background-color: #646464;
+}
+.wrapper::-webkit-resizer {
+  background-color: #666;
+}
+.table-dark {
+  --bs-table-bg: #1e1e26;
+  --bs-table-striped-bg: #1e1e26;
+  --bs-table-striped-color: #fff;
+  --bs-table-active-bg: #373b3e;
+  --bs-table-active-color: #fff;
+  --bs-table-hover-bg: #323539;
+  --bs-table-hover-color: #fff;
+}

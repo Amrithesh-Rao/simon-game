@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Simon</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  
+</head>
+ 
+<body>
+  <div class="fluid-container">
+    <div class="row">
+      <div class="col-lg-8 col-md-12 col-sm-12 my-auto">
+          
+        <form class="row g-3" action="/" method="POST">
+            <div class="col-auto mx-auto">
+                <input type="hidden" name="name" value="" id="inputName"  >
+                <input type="hidden" name="score" value=0 id="score">
+            </div>
+          </form>
+
+        <h1 id="level-title"><img class="start" src="images/start.png" alt="start"></h1>
+  <div class="container">
+    <div class="row">
+
+      <div type="button" id="green" class="btn green">
+
+      </div>
+
+      <div type="button" id="red" class="btn red">
+
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div type="button" id="yellow" class="btn yellow">
+
+      </div>
+      <div type="button" id="blue" class="btn blue">
+
+      </div>
+
+    </div>
+
+  </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 my-5 mx-auto" >
+        <h4 class="l-title">Leader board</h4>
+        <div class="wrapper">
+          <table class="table table-dark table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Rank</th>
+                <th scope="col">Name</th>
+                <th scope="col">Score</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% users.forEach(function (user){ %>
+                <tr>
+                <th scope="row">
+                  <% if(user.index==1){ %>
+                    🥇
+                  <% }else if(user.index==2){ %>
+                    🥈
+                  <% }else if(user.index==3){ %>
+                    🥉
+                  <%  }else{ %>
+                    <%= user.index %></th>
+                  <% } %>
+                  
+                <td><%= user.name %></td>
+                <td><%= user.score %></td>
+              </tr>
+              <% }) %>
+              
+            </tbody>
+          </div>
+          </table>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/game.js" charset="utf-8"></script>
+</body>
+
+</html>
